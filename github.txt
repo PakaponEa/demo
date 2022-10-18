@@ -1,0 +1,101 @@
+
+
+		cd forder
+	*****create a new repository on the command line
+		
+		****Configure Git
+			git config --global user.name "your_username"
+			git config --global user.email "your_email_address@example.com"
+			git config --global --list [To check the configuration, run:]
+			
+		****Git clone
+		
+			git clone https://github.com/pungon/key-EC.git
+			usename:user
+			password:accessskey
+			
+		
+		git init
+		git status
+			On branch master
+			Your branch is up to date with 'origin/master'.
+
+			Changes to be committed:
+			  (use "git restore --staged <file>..." to unstage)
+					new file:   testkeydemo.pem
+		git commit -m "first commit"
+		git remote add origin https://github.com/pungon/key-EC2
+		//////
+		git init
+		git add README.md
+		git commit -m "first commit"
+		git branch -M main
+		git remote add origin https://github.com/pungon/aks101.git
+		git push -u origin main
+			
+		
+		
+	*** if 	fatal: remote origin already exists.
+		git remote rm origin
+		git remote add origin https://github.com/pungon/key-EC2 [again]
+		
+		git push -u origin master
+		
+	*****or push an existing repository from the command line
+	
+		git remote add origin https://github.com/pungon/key-EC2
+		git branch -M main
+		git push -u origin main
+		
+
+
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-test-service
+spec:
+  selector:
+    app: bigooboss
+/
+for-az
+  ports:
+  - protocol: "TCP"
+    port: 6000
+    targetPort: 5000
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bigooboss
+/
+for-az
+spec:
+  selector:
+    matchLabels:
+      app: bigooboss
+/
+for-az
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: bigooboss
+/
+for-az
+    spec:
+      containers:
+      - name: bigooboss
+/
+for-az
+        image: bigooboss
+/
+for-az
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+		
