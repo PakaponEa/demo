@@ -5,6 +5,7 @@
 		
 		****Configure Git
 			git config --global user.name "your_username"
+git config --global user.name PakaponEa
 			git config --global user.email "your_email_address@example.com"
 			git config --global --list [To check the configuration, run:]
 			
@@ -30,7 +31,7 @@
 		git add README.md
 		git commit -m "first commit"
 		git branch -M main
-		git remote add origin https://github.com/pungon/aks101.git
+		git remote add origin https://github.com/PakaponEa/momo
 		git push -u origin main
 			
 		
@@ -43,10 +44,14 @@
 		
 	*****or push an existing repository from the command line
 	
-		git remote add origin https://github.com/pungon/key-EC2
+		
 		git branch -M main
+		git commit -m "my commit"
+		git remote add origin https://github.com/PakaponEa/demo
 		git push -u origin main
 		
+		git remote -v
+		git remote remove origin
 
 
 
